@@ -2,7 +2,7 @@
 
 ---
 ## screenshots
-
+![admin base](https://github.com/noman93/Ecommerce-Website-In-django/blob/master/static/screenshots/admin%20homepage.PNG?raw=true "admin homebase")
 
 ## FUNCTIONS
 ## Customer
