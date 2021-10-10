@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Ecommerce By Noman</title>
+    <title>Gear Uo Yourself</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -288,10 +288,11 @@
         </div>
     </div>
     <!-- content start-->
-    {% block content %} {% endblock content %}
+    {% block content %}
     <!-- content end-->
+    {% endblock content %}
     <br><br><br>
-    
+
     <script>
         $(document).ready(function() {
 
@@ -309,8 +310,8 @@
 
         });
     </script>
-
+    {% include "ecom/footer.html" %}
 </body>
-{% include "ecom/footer.html" %}
+
 
 </html>

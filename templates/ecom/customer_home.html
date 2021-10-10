@@ -31,7 +31,7 @@
     }
     
     body {
-        background-color: #020517;
+        background-color: #07031c;
     }
     
     .page-wrapper {
@@ -364,8 +364,7 @@
 
 {%else%}
 <h3 style="text-align:center; color:yellow;">No Search Found</h3>
-{%endif%}
-{% if messages %} {% for message in messages %} alert('{{message}}'); {% endfor %} {% endif %}
+{%endif%} {% if messages %} {% for message in messages %} alert('{{message}}'); {% endfor %} {% endif %}
 
 <br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br> {% endblock content %}

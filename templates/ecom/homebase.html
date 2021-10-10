@@ -4,12 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Ecommerce By Noman</title>
+    <title>Gear Up Yourself</title>
 
 </head>
 
 <body>
-    {%if request.user.is_authenticated%} {% include "ecom/customer_navbar.html" %} {%else%} {% include "ecom/navbar.html" %} {%endif%} {%block content%} {%endblock content%} {% include "ecom/footer.html" %}
+    {%if request.user.is_authenticated%} {% include "ecom/customer_navbar.html" %} {%else%} {% include "ecom/navbar.html" %} {%endif%} {%block content%} {%endblock content%}
 </body>
 
 

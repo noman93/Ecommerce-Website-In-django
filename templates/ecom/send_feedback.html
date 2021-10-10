@@ -4,13 +4,13 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Ecommerce By Noman</title>
+    <title>Gear Up Yourself</title>
     <style media="screen">
         .form-style-1 {
-            margin: 10px auto;
+            margin: auto;
             max-width: 400px;
             padding: 20px 12px 10px 20px;
-            font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font: 15px "Lucida Sans Unicode", "Lucida Grande", sans-serif, ;
         }
         
         .form-style-1 li {
@@ -84,7 +84,7 @@
         
         .form-style-1 input[type=submit],
         .form-style-1 input[type=button] {
-            background: #4B99AD;
+            background: #789399;
             padding: 8px 15px 8px 15px;
             border: none;
             color: #fff;
@@ -100,12 +100,13 @@
         
         .form-style-1 .required {
             color: red;
+            size: 5px
         }
     </style>
 
 </head>
 
-<body style="background-color: #B3E5FC;">
+<body style="background-color: #076c9b;">
 
     {%if request.user.is_authenticated%} {% include "ecom/customer_navbar.html" %} {%else%} {% include "ecom/navbar.html" %} {%endif%}
 

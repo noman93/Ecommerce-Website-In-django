@@ -2,14 +2,70 @@
 <html lang="en" dir="ltr">
 
 <head>
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>LazyCoder || sumit</title>
+    <title>Ecommerce By Noman</title>
+
+    <style>
+        body {
+            background-color: #B3E5FC;
+        }
+        
+        footer {
+            padding: 0px 0px 0px 0px;
+            background-color: black;
+            margin: 0px;
+        }
+        
+        #ftr {
+            padding: 20px;
+        }
+        
+        .fa {
+            font-size: 23px;
+            width: 60px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+        
+        .fa:hover {
+            opacity: 0.5;
+            text-decoration: none;
+        }
+        
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+            margin-top: 30px;
+        }
+        
+        .fa-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+        
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+        
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+        
+        p {
+            text-align: center;
+        }
+    </style>
 
 
 </head>
 
-<body style="background-color: #B3E5FC;">
+<body>
 
     {%if request.user.is_authenticated%} {% include "ecom/customer_navbar.html" %} {%else%} {% include "ecom/navbar.html" %} {%endif%}
 
@@ -28,7 +84,9 @@
             </div>
         </form>
     </center>
-    {% include "ecom/footer.html" %}
+
+
+    <br><br><br><br><br><br><br><br><br> {% include "ecom/footer.html" %}
 </body>
 
 
