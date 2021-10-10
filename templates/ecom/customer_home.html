@@ -31,7 +31,7 @@
     }
     
     body {
-        background-color: #8c9eff;
+        background-color: #07031c;
     }
     
     .page-wrapper {
@@ -342,7 +342,7 @@
                             </div>
 
                             <a class="cart" href="{% url 'add-to-cart' p.id  %}">
-                                <span class="price">₹ {{p.price}}</span>
+                                <span class="price">${{p.price}}</span>
                                 <span class="add-to-cart">
                     <span class="txt">Add in cart</span>
                                 </span>
@@ -364,17 +364,7 @@
 
 {%else%}
 <h3 style="text-align:center; color:yellow;">No Search Found</h3>
-{%endif%}
+{%endif%} {% if messages %} {% for message in messages %} alert('{{message}}'); {% endfor %} {% endif %}
 
-<script>
-    { %
-        if messages %
-    } { %
-        for message in messages %
-    }
-    alert('{{message}}'); { % endfor %
-    } { % endif %
-    }
-</script>
 <br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br> {% endblock content %}

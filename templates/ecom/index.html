@@ -29,7 +29,7 @@
     }
     
     body {
-        background-color: #8c9eff;
+        background-color: #2e2f33;
     }
     
     .page-wrapper {
@@ -337,7 +337,7 @@
                             </div>
 
                             <a class="cart" href="{% url 'add-to-cart' p.id  %}">
-                                <span class="price">$ {{p.price}}</span>
+                                <span class="price">${{p.price}}</span>
                                 <span class="add-to-cart">
                     <span class="txt">Add in cart</span>
                                 </span>
@@ -362,4 +362,4 @@
 {%endif%} {%if messages %} {%for message in messages %} alert('{{message}}'); {% endfor %} {% endif %}
 
 <br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br> {% endblock content %}
+<br><br><br><br><br><br><br><br><br><br><br><br> {% include "ecom/footer.html" %} {% endblock content %}
