@@ -11,12 +11,14 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django_heroku
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
 STATIC_DIR=os.path.join(BASE_DIR,'static')
-
+STATIC_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -27,7 +29,7 @@ SECRET_KEY = '#vw(03o=(9kbvg!&2d5i!2$_58x@_-3l4wujpow6(ym37jxnza'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ecom151.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -46,6 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -135,14 +138,16 @@ LOGIN_REDIRECT_URL='/afterlogin'
 
 #for contact us give your gmail id and password
 EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'Shuvo3107@gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'from@gmail.com' # this email will be used to send emails
-EMAIL_HOST_PASSWORD = 'xyz' # host email password required
+# this email will be used to send emails
+EMAIL_HOST_USER = 'Shuvo3107@gmail.com'
+EMAIL_HOST_PASSWORD = '@@NS8062'  # host email password required
 # now sign in with your host gmail account in your browser
 # open following link and turn it ON
 # https://myaccount.google.com/lesssecureapps
 # otherwise you will get SMTPAuthenticationError at /contactus
 # this process is required because google blocks apps authentication by default
-EMAIL_RECEIVING_USER = ['to@gmail.com'] # email on which you will receive messages sent from website
+EMAIL_RECEIVING_USER = ['shuvo3107@gmail.com'] # email on which you will receive messages sent from website
+django_heroku.settings(locals())

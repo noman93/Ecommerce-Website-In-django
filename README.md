@@ -2,7 +2,9 @@
 
 ---
 ## screenshots
-
+![admin base](https://github.com/noman93/Ecommerce-Website-In-django/blob/master/static/screenshots/admin%20homepage.PNG?raw=true "admin homebase")
+![home](https://github.com/noman93/Ecommerce-Website-In-django/blob/master/static/screenshots/home%20page.PNG?raw=true "home")
+![](https://github.com/noman93/Ecommerce-Website-In-django/blob/master/static/screenshots/cart.PNG?raw=true "cart")
 
 ## FUNCTIONS
 ## Customer
@@ -77,5 +79,3 @@ https://myaccount.google.com/lesssecureapps
 
 ## Disclaimer
 This project is developed for demo purpose and it's not supposed to be used in real application.
-
-
