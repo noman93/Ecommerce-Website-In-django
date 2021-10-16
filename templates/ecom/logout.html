@@ -1,7 +1,21 @@
-{% extends 'ecom/homebase.html' %} {% load static %} {% block content %}
-<br><br><br>
-<img src="static/images/logout_img.png " style="width:800px; height:100px; padding-left:400px; ">
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-<br><br><br><br><br>
-<br><br><br><br><br>
-<br><br><br> {% endblock content %}
+<head>
+    <meta charset="utf-8">
+    <title>Gear Up Yourself</title>
+
+</head>
+
+<body>
+    {%if request.user.is_authenticated%} {% include "ecom/customer_navbar.html" %} {%else%} {% include "ecom/navbar.html" %} {%endif%} {% block content %}
+    <br><br><br>
+    <img src="static/images/logout_img.png " style="width:800px; height:100px; padding-left:400px; ">
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br> {% endblock content %}
+</body>
+
+</html>
